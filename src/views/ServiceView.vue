@@ -38,7 +38,6 @@
 
 <style scoped>
     .container{
-        width: 99.9%;
         background-color: #1e1f27;
         border: 1px solid #1e1f27;
         padding: 70px 0px;

@@ -1,15 +1,15 @@
 <template>
   <div class="row">
-    <swiper
+    <Swiper
       :slides-per-view="3"
       loop
       :navigation="true"
       pagination
     >
-      <swiper-slide v-for="(image, index) in images" :key="index">
+      <SwiperSlide class="img" v-for="(image, index) in images" :key="index">
         <img :src="image" alt="Image" />
-      </swiper-slide>
-    </swiper>
+      </SwiperSlide>
+    </Swiper>
 
     <div class="swiper-button-prev"></div>
     <div class="swiper-button-next"></div>
@@ -35,54 +35,34 @@
 
  <script setup>
 // import 'swiper/swiper-bundle.css';
-// // import { Swiper, SwiperSlide } from 'swiper/vue';
-// import SwiperCore, { Navigation, Pagination } from 'swiper';
+import { ref, onMounted } from 'vue';
+import {SwiperSlide}  from 'swiper/vue';
+import {Swiper} from 'swiper/vue';
+// import {Grid} from 'swiper/vue'
 
-// SwiperCore.use([Navigation, Pagination]);
+import "swiper/css"
+import 'swiper/css/grid'
 
-const images = [
+const images = ref([
   new URL('@/assets/main-lambo.png', import.meta.url).href,
   new URL('@/assets/main-mers.png', import.meta.url).href,
   new URL('@/assets/main-rolls.png', import.meta.url).href,
   new URL('@/assets/main-audi.png', import.meta.url).href
-  // require('@/assets/main-mers.png'),
-  // require('@/assets/main-rolls.png'),
-  // require('@/assets/main-audi.png')
-];
+]);
+
+// const swiperInstance = ref(null)
+
+// onMounted(()=>{
+//   swiperInstance.value = new Swiper('.swiper',{
+//     modules: [Grid],
+//     grid: {
+//       rows: 2,
+//     },
+//     slidesPerView: 3,
+//     spaceBetween: 30,
+//   })
+// })
 </script> 
-
-<!-- <script>
-  import { Navigation, Pagination, Scrollbar, A11y } from 'swiper/modules';
-
-  // Import Swiper Vue.js components
-  import { Swiper, SwiperSlide } from 'swiper/vue';
-
-  // Import Swiper styles
-  import 'swiper/css';
-  import 'swiper/css/navigation';
-  import 'swiper/css/pagination';
-  import 'swiper/css/scrollbar';
-
-  export default {
-    components: {
-      Swiper,
-      SwiperSlide,
-    },
-    setup() {
-      const onSwiper = (swiper) => {
-        console.log(swiper);
-      };
-      const onSlideChange = () => {
-        console.log('slide change');
-      };
-      return {
-        onSwiper,
-        onSlideChange,
-        modules: [Navigation, Pagination, Scrollbar, A11y],
-      };
-    },
-  };
-</script> -->
 
 <style scoped>
   .row{
@@ -90,5 +70,17 @@ const images = [
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
+  }
+
+  .img{
+    width: 700px;
+    height: 450px;
+    display: flex;
+    align-items: center;
+  }
+  img{
+    max-width: 100%;
+    margin: 30px 70px;
+    padding: 20px 40px;
   }
 </style>

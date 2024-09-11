@@ -23,13 +23,5 @@ import AppFooter from './components/AppFooter.vue';
 </template> -->
 
 <style scoped>
-  /* *{
-    margin: 0px;
-    padding: 0px;
-    box-sizing: border-box;
-  } */
-  /* html, body{
-    height: 100%;
-    overflow: hidden;
-  } */
+  
 </style>

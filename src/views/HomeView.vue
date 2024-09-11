@@ -3,6 +3,9 @@ import AppSlider from "@/components/ui/AppSlider.vue";
 import AppCars from "@/components/cars/AppCars.vue";
 import AppBrands from "@/components/brand/AppBrands.vue";
 import ServiceView from "./ServiceView.vue";
+import LuxInfo from "@/components/rent infos/LuxInfo.vue";
+import SportInfo from "@/components/rent infos/SportInfo.vue";
+import FaqView from "./FaqView.vue";
 </script>
 
 <template>
@@ -21,10 +24,12 @@ import ServiceView from "./ServiceView.vue";
       </div>
       <app-slider></app-slider>
       <app-brands></app-brands>
-      <app-cars></app-cars>
-      <service-view></service-view>
-      
+      <app-cars></app-cars> 
     </div>
+    <service-view></service-view>
+    <lux-info></lux-info>
+    <sport-info></sport-info>
+    <faq-view></faq-view>
   </div>
   
 </template>
@@ -58,6 +63,7 @@ import ServiceView from "./ServiceView.vue";
     justify-content: center;
     gap: 10px;
     transition: all .2s ease;
+    cursor: pointer;
   }
 
   .info_link:hover a{

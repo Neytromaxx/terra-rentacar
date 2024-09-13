@@ -1,11 +1,11 @@
 <script setup>
-import { ref } from 'vue'
+import {useStore} from 'vuex'
 
-const isMenuOpen = ref(false)
-
-function toggleMenu (){
-    isMenuOpen.value = !isMenuOpen.value
-}
+const store = useStore()
+const open = (()=>{
+  store.commit('setSidebar')
+  console.log('open')
+})
 </script>
 
 <template>
@@ -27,24 +27,24 @@ function toggleMenu (){
                 </div>
             </div>
             <div class="nav_right">
-                <button class="menu-toggle" @click="toggleMenu">☰</button>
-                <ul class="nav_items" :class="{ 'active': isMenuOpen }">
-                    <li>
+                <button class="sidebar hideOnDesk" @click="open">☰</button>
+                <ul>
+                    <li class="hideOnMobile">
                         <RouterLink to="/cars">Cars</RouterLink>
                     </li>
-                    <li>
+                    <li class="hideOnMobile">
                         <RouterLink to="/brand">Brand</RouterLink>
                     </li>
-                    <li>
+                    <li class="hideOnMobile">
                         <RouterLink to="/service">Services</RouterLink>
                     </li>
-                    <li>
+                    <li class="hideOnMobile">
                         <RouterLink to="/about">About us</RouterLink>
                     </li>
-                    <li>
+                    <li class="hideOnMobile">
                         <RouterLink to="/contact">Contacts</RouterLink>
                     </li>
-                    <li>
+                    <li class="hideOnMobile">
                         <RouterLink to="/blog">Blog</RouterLink>
                     </li>
                 </ul>
@@ -56,10 +56,6 @@ function toggleMenu (){
 </template>
 
 <style scoped>
-    /* *{
-        padding: 0;
-        margin: 0;
-    } */
     nav{
         width: 100%;
         height: 100%;
@@ -115,13 +111,10 @@ function toggleMenu (){
         max-width: 770px;
     }
 
-    .menu-toggle {
-        display: none;
-        background: none;
-        border: none;
-        font-size: 24px;
-        color: #cdcdce;
-        cursor: pointer;
+    .sidebar{
+      background-color: #fff;
+      outline: none;
+      border: none;
     }
 
     .nav_right ul{
@@ -227,16 +220,63 @@ function toggleMenu (){
             margin-left: 15px;
         }
     }
-
+    @media (min-width: 995px) {
+        .hideOnDesk{
+      display: none;
+    }
+    }
     @media (max-width: 995px) {
+        .hideOnMobile{
+            display: none;
+        }
+
         .menu-toggle{
             display: block;
         }
 
-        .nav_items{
+        .nav__flags{
+            width: 25px;
+            display: flex;
+        }
+
+        .nav__flags img{
+            max-width: 25px;
+            display: flex;
+        }
+
+         .search-input{
+            width: 350px;
+            margin-left: 10px;
+        }
+
+        /*.search-input input{
             display: none;
-            flex-direction: column;
-            width: 50%;
+        } */
+
+        ul.active{
+            display: flex;
+        }
+    }
+    @media (max-width: 605px) {
+        .menu-toggle{
+            display: block;
+        }
+
+        .nav__flags{
+            width: 25px;
+            display: flex;
+        }
+
+        .nav__flags img{
+            max-width: 100%;
+        }
+
+        .search-input{
+            width: 50px;
+        }
+
+        .search-input input{
+            display: none;
         }
 
         ul.active{

@@ -3,32 +3,32 @@
     <div class="row">
       <h2>Budget cars Rental Emirates</h2>
       <div class="flexbox">
-        <BudgetCars v-for="item in slicebudget" :key="item.id" :cars="item" />
+        <BudgetCars v-for="item in slicebudget" :key="item.id" :cars="item" @click="goToDetails(item.id)"/>
       </div>
 
       <h2>Sports cars Rental Emirates</h2>
       <div class="flexbox">
-        <SportCars v-for="item in slicesport" :key="item.id" :cars="item" />
+        <SportCars v-for="item in slicesport" :key="item.id" :cars="item" @click="goToDetails(item.id)"/>
       </div>
 
       <h2>Hyper Cars Rental Emirates</h2>
       <div class="flexbox">
-        <HyperCars v-for="item in slicehyper" :key="item.id" :cars="item" />
+        <HyperCars v-for="item in slicehyper" :key="item.id" :cars="item" @click="goToDetails(item.id)"/>
       </div>
       
       <h2>Luxury Cars Rental Emirates</h2>
       <div class="flexbox">
-        <LuxCars v-for="item in slicelux" :key="item.id" :cars="item" />
+        <LuxCars v-for="item in slicelux" :key="item.id" :cars="item" @click="goToDetails(item.id)"/>
       </div>
       
       <h2>Suv Cars Renal Emirates</h2>
       <div class="flexbox">
-        <SuvCars v-for="item in slicesuv" :key="item.id" :cars="item" />
+        <SuvCars v-for="item in slicesuv" :key="item.id" :cars="item" @click="goToDetails(item.id)"/>
       </div>
 
       <h2>Suv Cars Renal Emirates</h2>
       <div class="flexbox">
-        <CabCars v-for="item in slicecab" :key="item.id" :cars="item" />
+        <CabCars v-for="item in slicecab" :key="item.id" :cars="item" @click="goToDetails(item.id)"/>
       </div>
     </div>
   </article>
@@ -37,6 +37,7 @@
 
 <script setup>
 import { onMounted, ref } from 'vue'
+import { useRouter } from 'vue-router'
 import BudgetCars from './BudgetCars.vue'
 import SportCars from './SportCars.vue'
 import HyperCars from './HyperCars.vue'
@@ -85,6 +86,12 @@ const fetchCars = async () => {
     console.error('Error fetching car data:', error)
   }
 }
+
+const router = useRouter();
+const goToDetails = (id)=>{
+  router.push({ name: 'DetailsPage', params: { id } });
+}
+
 onMounted(fetchCars)
 </script>
 

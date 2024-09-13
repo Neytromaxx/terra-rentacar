@@ -44,6 +44,7 @@ const name = computed(()=> props.cars?.model?.name)
     border: none;
     /* background: linear-gradient(rgb(148, 156, 148),rgb(148, 156, 148) 10%, rgba(255,0,0,0)); */
     background: linear-gradient(#636161 1%, #232323 , #0f0f0f);
+    cursor: pointer;
   }
 
   .cars_card img{

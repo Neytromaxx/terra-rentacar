@@ -39,7 +39,7 @@
 <style scoped>
     .container{
         /* background-color: #1e1f27; */
-        background-color: transparent;
+        background-color: #1e1f27;
         border: 1px solid #1e1f27;
         padding: 70px 0px;
     }

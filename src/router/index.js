@@ -44,6 +44,12 @@ const router = createRouter({
       name: 'faq',
       component: () => import('../views/FaqView.vue')
     },
+    {
+      path: '/details/:id',
+      name: 'DetailsPage',
+      component: () => import('../components/id/DetailId.vue'),
+      props: true
+    }
   ]
 })
 

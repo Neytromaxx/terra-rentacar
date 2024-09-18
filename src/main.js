@@ -4,7 +4,6 @@ import router from './router'
 import store from './vuex/store'
 
 
-
 const app = createApp(App)
 
 app.use(router)

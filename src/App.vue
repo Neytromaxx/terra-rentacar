@@ -27,7 +27,7 @@ router.afterEach(()=>{
 onMounted(()=>{
     setTimeout(()=>{
         isLoading.value = false
-    },3000)
+    },5000)
 })
 </script>
 

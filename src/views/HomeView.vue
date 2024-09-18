@@ -1,7 +1,7 @@
 <script setup>
 import AppSlider from "@/components/ui/AppSlider.vue";
 import AppCars from "@/components/cars/AppCars.vue";
-import AppBrands from "@/components/brand/AppBrands.vue";
+import BrandsView from "./BrandsView.vue";
 import ServiceView from "./ServiceView.vue";
 import LuxInfo from "@/components/rent infos/LuxInfo.vue";
 import SportInfo from "@/components/rent infos/SportInfo.vue";
@@ -23,9 +23,13 @@ import FaqView from "./FaqView.vue";
           </svg></p>
       </div>
       <app-slider></app-slider>
-      <app-brands></app-brands>
-      <app-cars></app-cars> 
     </div>
+      <brands-view></brands-view>
+    <div class="row">
+      <app-cars></app-cars> 
+    </div>  
+      
+    
     <service-view></service-view>
     <lux-info></lux-info>
     <sport-info></sport-info>

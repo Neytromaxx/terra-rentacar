@@ -8,8 +8,8 @@ import ru from './lang/ru.json'
 
 const i18n = createI18n({
     legacy: false,
-    locale: 'ru',
-    fallbackLocale: 'ru',
+    locale: 'en',
+    fallbackLocale: 'en',
     messages: {
       en: en,
       ru: ru

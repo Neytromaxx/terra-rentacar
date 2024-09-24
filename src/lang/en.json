@@ -1,0 +1,38 @@
+{
+    "Navbar":{
+        "Car":"Cars",
+        "Brand":"Brands",
+        "Sercive":"Services",
+        "About":"About us",
+        "Contact":"Contacts",
+        "Blog":"Blog"
+    },
+    "home":{
+        "rent":"TOP LUXURY CAR RENTAL EMIRATES",
+        "rent-info":"Best sports car & supercar rental Emirates, Exclusive offers on luxury car rental Emirates Cheap price",
+        "catalog":"RENT A CAR EMIRATES CATALOG"
+    },
+    "Footer":{
+        "Rent":"LUXURY CAR RENTAL IN EMIRATES",
+        "rent-info":"Rent sports and luxury cars directly without intermediaries. Rent a car in Dubai with Auto Zoom Car Rental - safety and driving pleasure",
+        "Car-cars":"Cars",
+        "Car-Budget":"Budget cars Rental Emirates",
+        "Car-sport":"Sports cars Rental Emirates",
+        "Car-hyper":"Hyper cars Rental Emirates",
+        "Car-lux":"Luxury cars Rental Emirates",
+        "Car-suv":"SUV cars Rental Emirates",
+        "Car-cabriolet":"Cabriolet cars Rental Emirates",
+        "Blog":"Blog",
+        "Service":"Service",
+        "Contact":"Contacts",
+        "contact-location":"Elite 3 Sports City, Dubai 26W8 24J, United Arab Emirates",
+        "contact-num":"+998 99 0000441",
+        "contact-hour":"Working hours",
+        "About":"About us",
+        "team":"Our team",
+        "follow":"Follow us",
+        "last-call":"Call us",
+        "last-copyright":"2024 Terra Car Rental. United Arab Emirates.",
+        "last-terms":"Terms and Conditions"
+    }
+}

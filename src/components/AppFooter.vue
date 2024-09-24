@@ -1,5 +1,7 @@
 <script setup>
+import { useI18n } from 'vue-i18n'
 
+const { t } = useI18n()
 </script>
 
 <template>
@@ -10,55 +12,55 @@
             <div class="img">
                 <img src="../assets/logoTerra5.png" alt="">
             </div>
-            <h2>LUXURY CAR RENTAL IN EMIRATES</h2>
-            <p>Rent sports and luxury cars directly without intermediaries. Rent a car in Dubai with Auto Zoom Car Rental - safety and driving pleasure</p>
+            <h2>{{t('Footer.Rent')}}</h2>
+            <p>{{ t('Footer.rent-info')}}</p>
         </div>
         <div class="cars">
             <h3>
-                <router-link to="/cars">Cars</router-link>
+                <router-link to="/cars">{{ t('Footer.Car-cars')}}</router-link>
             </h3>
             <p>
-                <RouterLink to="/cars">Budget cars Rental Emirates</RouterLink>
+                <RouterLink to="/cars">{{ t('Footer.Car-Budget')}}</RouterLink>
             </p>
             <p>
-                <RouterLink to="/cars">Sports cars Rental Emirates</RouterLink>
+                <RouterLink to="/cars">{{ t('Footer.Car-sport')}}</RouterLink>
             </p>
             <p>
-                <RouterLink to="/cars">Hyper cars Rental Emirates</RouterLink>
+                <RouterLink to="/cars">{{ t('Footer.Car-hyper')}}</RouterLink>
             </p>
             <p>
-                <RouterLink to="/cars">Luxury cars Rental Emirates</RouterLink>
+                <RouterLink to="/cars">{{ t('Footer.Car-lux')}}</RouterLink>
             </p>
             <p>
-                <RouterLink to="/cars">SUV cars Rental Emirates</RouterLink>
+                <RouterLink to="/cars">{{ t('Footer.Car-suv')}}</RouterLink>
             </p>
             <p>
-                <RouterLink to="/cars">Cabriolet cars Rental Emirates</RouterLink>
+                <RouterLink to="/cars">{{ t('Footer.Car-cabriolet')}}</RouterLink>
             </p>
         </div>
         <div class="blog">
             <h3>
-                <RouterLink to="/blog">Blog</RouterLink>
+                <RouterLink to="/blog">{{t('Footer.Blog')}}</RouterLink>
             </h3>
         
             <h3 style="margin-top: 35px;">
-                <RouterLink to="/service" >Services</RouterLink>
+                <RouterLink to="/service" >{{t('Footer.Service')}}</RouterLink>
             </h3>
             <h3 style="margin-top: 35px;">
-                <RouterLink to="/contact" >Contacts</RouterLink>
+                <RouterLink to="/contact" >{{t('Footer.Contact')}}</RouterLink>
             </h3>
-            <p>Elite 3 Sports City, Dubai 26W8 24J, United Arab Emirates</p>
-            <p>+998 99 0000441</p>
-            <p>Working hours: 24/7</p>
+            <p>{{t('Footer.contact-location')}}</p>
+            <p>{{t('Footer.contact-num')}}</p>
+            <p>{{t('Footer.contact-hour')}}: 24/7</p>
         </div>
         <div class="about">
             <h3>
-                <RouterLink to="/about">About us</RouterLink>
+                <RouterLink to="/about">{{t('Footer.About')}}</RouterLink>
             </h3>
-            <p><RouterLink to="/">Our team</RouterLink></p>
+            <p><RouterLink to="/">{{t('Footer.team')}}</RouterLink></p>
             <p><RouterLink to="/faq">FAQ</RouterLink></p>
             <div class="follow">
-                <p>Follow us</p>
+                <p>{{t('Footer.follow')}}</p>
                 <img src="" alt="">
                 <img src="" alt="">
                 <img src="" alt="">
@@ -68,11 +70,11 @@
         <hr>
         <div class="last">
             <button onclick="window.location.href='tel:+998 99 0000441'">
-                Call Us
+                {{t('Footer.last-call')}}
             </button>
-            <p>© 2024 Terra Car Rental. United Arab Emirates.</p>
+            <p>© {{t('Footer.last-copyright')}}</p>
             <p>
-                <RouterLink to="/conditions">Terms and Conditions</RouterLink> 
+                <RouterLink to="/conditions">{{t('Footer.last-terms')}}</RouterLink> 
             </p>
             
         </div>

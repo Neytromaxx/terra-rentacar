@@ -6,6 +6,7 @@ const open = (()=>{
   store.commit('setSidebar')
   console.log('open')
 })
+
 </script>
 
 <template>
@@ -13,8 +14,8 @@ const open = (()=>{
         <div class="container">
             <div class="nav_left">
                 <div class="nav__flags">
-                    <img src="../assets/eng.png" alt="">
-                    <img src="../assets/ru.png" alt="">
+                    <img src="../assets/eng.png" alt="" @click="$i18n.locale = 'en'">
+                    <img src="../assets/ru.png" alt="" @click="$i18n.locale = 'ru'">
                 </div>
                 <form  method="get" class="search-input">
                     <img src="../assets/magnifying-glass.svg" alt="">
@@ -30,22 +31,22 @@ const open = (()=>{
                 <button class="sidebar hideOnDesk" @click="open">☰</button>
                 <ul>
                     <li class="hideOnMobile">
-                        <RouterLink to="/cars">Cars</RouterLink>
+                        <RouterLink to="/cars">{{$t('Navbar.Car')}}</RouterLink>
                     </li>
                     <li class="hideOnMobile">
-                        <RouterLink to="/brand">Brand</RouterLink>
+                        <RouterLink to="/brand">{{$t('Navbar.Brand')}}</RouterLink>
                     </li>
                     <li class="hideOnMobile">
-                        <RouterLink to="/service">Services</RouterLink>
+                        <RouterLink to="/service">{{$t('Navbar.Sercive')}}</RouterLink>
                     </li>
                     <li class="hideOnMobile">
-                        <RouterLink to="/about">About us</RouterLink>
+                        <RouterLink to="/about">{{$t('Navbar.About')}}</RouterLink>
                     </li>
                     <li class="hideOnMobile">
-                        <RouterLink to="/contact">Contacts</RouterLink>
+                        <RouterLink to="/contact">{{$t('Navbar.Contact')}}</RouterLink>
                     </li>
                     <li class="hideOnMobile">
-                        <RouterLink to="/blog">Blog</RouterLink>
+                        <RouterLink to="/blog">{{$t('Navbar.Blog')}}</RouterLink>
                     </li>
                 </ul>
             </div>

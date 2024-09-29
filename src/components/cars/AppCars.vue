@@ -1,32 +1,32 @@
 <template>
   <article>
     <div class="row">
-      <h2>Budget cars Rental Emirates</h2>
+      <h2>{{ t('car.budget') }}</h2>
       <div class="flexbox">
         <BudgetCars v-for="item in slicebudget" :key="item.id" :cars="item" @click="goToDetails(item.id)"/>
       </div>
 
-      <h2>Sports cars Rental Emirates</h2>
+      <h2>{{ t('car.sport') }}</h2>
       <div class="flexbox">
         <SportCars v-for="item in slicesport" :key="item.id" :cars="item" @click="goToDetails(item.id)"/>
       </div>
 
-      <h2>Hyper Cars Rental Emirates</h2>
+      <h2>{{ t('car.hyper') }}</h2>
       <div class="flexbox">
         <HyperCars v-for="item in slicehyper" :key="item.id" :cars="item" @click="goToDetails(item.id)"/>
       </div>
       
-      <h2>Luxury Cars Rental Emirates</h2>
+      <h2>{{ t('car.lux') }}</h2>
       <div class="flexbox">
         <LuxCars v-for="item in slicelux" :key="item.id" :cars="item" @click="goToDetails(item.id)"/>
       </div>
       
-      <h2>Suv Cars Renal Emirates</h2>
+      <h2>{{ t('car.suv') }}</h2>
       <div class="flexbox">
         <SuvCars v-for="item in slicesuv" :key="item.id" :cars="item" @click="goToDetails(item.id)"/>
       </div>
 
-      <h2>Suv Cars Renal Emirates</h2>
+      <h2>{{ t('car.cab') }}</h2>
       <div class="flexbox">
         <CabCars v-for="item in slicecab" :key="item.id" :cars="item" @click="goToDetails(item.id)"/>
       </div>
@@ -43,7 +43,10 @@ import SportCars from './SportCars.vue'
 import HyperCars from './HyperCars.vue'
 import LuxCars from './LuxCars.vue'
 import SuvCars from './SuvCars.vue';
-import CabCars from './CabCars.vue'
+import CabCars from './CabCars.vue';
+import { useI18n } from 'vue-i18n'
+
+const { t } = useI18n()
 
 const allCars = ref([])
 const budgetCars = ref([])

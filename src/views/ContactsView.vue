@@ -5,12 +5,12 @@
                 <router-link to="/">Luxury Cars for Rent in Dubai / Contacts</router-link>
             </p>
             <div class="text__ques">
-                <h1>Have any question?</h1>
-                <p>We will glad to help</p>
+                <h1>{{ t('contact.ques') }}</h1>
+                <p>{{ t('contact.ques-n') }}</p>
             </div>
             <div class="text__office">
-                <h2>Head office</h2>
-                <p><img src="../assets/location.svg" alt="">Elite 3 Sports City, Dubai 26W8 24J, United Arab Emirates</p>
+                <h2>{{ t('contact.office') }}</h2>
+                <p><img src="../assets/location.svg" alt="">{{ t('contact.location') }}</p>
                 <p><img src="../assets/tel.svg" alt="">+998 (99) 000 04 41</p>
                 <p><img src="../assets/mail.svg" alt="">terra-rentacar.mail.ru</p>
             </div>
@@ -32,7 +32,9 @@
 </template>
 
 <script setup>
+import { useI18n } from 'vue-i18n'
 
+const { t } = useI18n()
 </script>
 
 <style scoped>

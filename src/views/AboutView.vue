@@ -1,3 +1,8 @@
+<script setup>
+  import { useI18n } from 'vue-i18n'
+
+  const { t } = useI18n()
+</script>
 <template>
   <div class="container">
     <div class="row">
@@ -5,23 +10,23 @@
         <router-link to="/">Luxury Cars for Rent in Dubai / aboutUs</router-link>
       </p>
       <div class="text__about">
-        <h1>ABOUT US</h1>
-        <p class="large">Welcome to Auto Zoom Car Rental Co LLC - Your Partner in Unforgettable Journeys in Dubai!</p>
-        <p class="color">In a world where every trip is an adventure, Auto Zoom Car Rental Co LLC offers you a unique car rental experience in the heart of Dubai.</p> 
+        <h1>{{ t('about.about') }}</h1>
+        <p class="large">{{ t('about.welcome') }}</p>
+        <p class="color">{{ t('about.adventure') }}</p> 
       </div>  
       <div class="text__why">
-        <h1>Why Auto Zoom?</h1>
-        <p class="color"><b>Elegant Car Fleet:</b>We provide you the opportunity to choose from our luxurious car fleet - from sleek sedans to powerful SUVs. We have a vehicle to match your style and meet your needs.</p>
-        <p class="color"><b>Transparency and Trust:</b>We value every customer, so our prices are honest and transparent. No hidden fees, no unexpected surprises. Trust us, and we will make your rental experience straightforward and clear.</p>
-        <p class="color"><b>Service at Your Level:</b>Our friendly and professional team is ready to bring your ideas to life. We aim not just to provide a car but to create a genuine automotive experience for you.</p>
+        <h1>{{ t('about.why') }}</h1>
+        <p class="color"><b>{{ t('about.elegant') }}</b>{{ t('about.elegant-n') }}</p>
+        <p class="color"><b>{{ t('about.tran') }}</b>{{ t('about.tran-n') }}</p>
+        <p class="color"><b>{{ t('about.serv') }}</b>{{ t('about.serv-n') }}</p>
       </div>
       <div class="text__mission">
-        <h2>Our mission:</h2>
-        <p>Auto Zoom Car Rental Co LLC is created with one goal - to make every journey unforgettable. We strive to offer you not just a car but the key to new experiences and adventures.</p>
+        <h2>{{ t('about.mission') }}</h2>
+        <p>{{ t('about.mission-n') }}</p>
       </div>
       <div class="text__contact">
-        <h2>Contact us</h2>
-        <p>Trust the professionals - trust Auto Zoom Car Rental Co LLC. Get in touch with us today to start your exciting journey through Dubai in our stylish and reliable cars. Allow yourself to savor every moment of your trip.</p>
+        <h2>{{ t('about.cont') }}</h2>
+        <p>{{ t('about.cont-n') }}</p>
       </div>
     </div>
   </div>

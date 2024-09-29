@@ -4,24 +4,24 @@
         <p>
             <router-link to="/">Luxury Cars for Rent in Dubai / Services</router-link>
         </p>
-        <h1>SERVICES</h1>
+        <h1>{{ t('service.service') }}</h1>
         <div class="imgs">
             <div class="img_buggy">
                 <img src="../assets/service-1.jpg" alt="">
-                <h2>Ride a buggy in Dubai and have fun</h2>
-                <p>Experience the thrill of a dune buggy tour in Dubai with us. We offer free hotel pick-up & drop-off service. Book now</p>
+                <h2>{{ t('service.buggy') }}</h2>
+                <p>{{ t('service.buggy-info') }}</p>
                 <h3>
-                    <router-link to="/uslugbuggies">Learn more
+                    <router-link to="/uslugbuggies">{{ t('service.link') }}
                         <img src="../assets/arrow-left.svg" alt="">
                     </router-link>
                 </h3>
             </div>
             <div class="img_rolls">
                 <img src="../assets/service-2.jpg" alt="">
-                <h2>Photoshoot with luxury car rental Dubai</h2>
-                <p>Professional car photoshoot as an additional type of service at Terra Car Rental</p>
+                <h2>{{ t('service.lux') }}</h2>
+                <p>{{ t('service.lux-info') }}</p>
                 <h3>
-                    <router-link to="/uslugcars">Learn more
+                    <router-link to="/uslugcars">{{ t('service.link') }}
                         <img src="../assets/arrow-left.svg" alt="">
                     </router-link>
                 </h3>
@@ -33,7 +33,9 @@
 </template>
 
 <script setup>
+import { useI18n } from 'vue-i18n'
 
+const { t } = useI18n()
 </script>
 
 <style scoped>

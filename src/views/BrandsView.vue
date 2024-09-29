@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <div class="row">
-      <h1>Brands</h1>
+      <h1>{{ t('brands') }}</h1>
       <div class="flexbox">
         <app-brands v-for="item in brands.data" :key="item.id" :brand="item"></app-brands>
       </div>
@@ -13,6 +13,9 @@
 <script setup>
 import AppBrands from '@/components/brand/AppBrands.vue';
 import { onMounted, ref } from 'vue';
+import { useI18n } from 'vue-i18n'
+
+const { t } = useI18n()
 
 const brands = ref([])
 

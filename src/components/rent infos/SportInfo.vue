@@ -14,8 +14,8 @@
             </iframe>
         </div>
         <div class="info_right">
-            <h1>SPORTS CAR RENTAL DUBAI</h1>
-            <p>Terra L L C a Car is a Top Luxury Car Rental Dubai based company, We offer sports car rental, and supercar rental in Dubai. The best luxury car rental process provided by our fleet . We own a diverse range of luxury supercar rental and sports car rental Dubai style , including Rolls Royce, Lamborghini, Maserati, Ferrari, Mercedes Benz, Porsche, and Range Rover, to name a few. Rent a car with the best car rental company in Dubai.</p>
+            <h1>{{ t('sport.car') }}</h1>
+            <p>{{ t('sport.info') }}</p>
             <p class="info_link">
                 <router-link to="/cars"> ALL CARS</router-link>
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
@@ -28,7 +28,9 @@
 </template>
   
 <script setup>
+import { useI18n } from 'vue-i18n'
 
+const { t } = useI18n()
 </script>
 
 <style scoped>
